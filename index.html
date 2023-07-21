@@ -33,17 +33,22 @@
 
       var options = {
         title: 'Finance Tracker',
-        titleTextStyle: { color: '#ff9900', fontName: 'Times', fontSize: 24 },
-        backgroundColor: '#0a0d4b',
+        titleTextStyle: { color: '#ff9900', fontName: 'Wide', fontSize: 24 },
+        backgroundColor: '#22226b',
         curveType: 'none',
-        legend: { position: 'bottom', textStyle: { color: '#ff9900', fontName: 'Times', fontSize: 7 } },
-        vAxis: { textStyle: { color: '#ff9900', fontName: 'Times', fontSize: 7 } },
-        hAxis: { textStyle: { color: '#ff9900', fontName: 'Times', fontSize: 7 } },
+        legend: { position: 'bottom', textStyle: { color: '#ff9900', fontName: 'Wide', fontSize: 7 } },
+        vAxis: { textStyle: { color: '#ff9900', fontName: 'Wide', fontSize: 7 } },
+        hAxis: { textStyle: { color: '#ff9900', fontName: 'Wide', fontSize: 7 } },
         series: {
-          0: { color: '#00ff00', lineWidth: 2, pointShape: 'diamond', pointSize: 5 },
+          0: { color: '#00ff00', lineWidth: 2, pointShape: 'circle', pointSize: 3 },
         },
-        width: '200%',
-        height: 300,
+        width: '600%',
+        height: 400,
+        animation: {
+          startup: true,
+          duration: 1000,
+          easing: 'inandout',
+        },
       };
 
       var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
